@@ -2,88 +2,58 @@ let laCasaDePapleQuestions = [
 	{
 		question:
 			'How many people did The Professor recruit to carry out the plan to occupy the Royal Mint of Spain?',
-		choiceA: '8',
-		choiceB: '9',
-		choiceC: '10',
-		choiceD: '11',
-		correctAnswer: '8',
+		choices = ['8', '9','10','11'],
+		correctAnswer: 0
 	},
 	{
 		question: ' Inspector Raquel’s mother suffers from what medical condition?',
-		choiceA: 'Alzheimer’s Disease',
-		choiceB: 'Paranoid Schizophrenia',
-		choiceC: 'Post-Traumatic Stress Disorder',
-		choiceD: 'Cancer',
-		correctAnswer: 'Alzheimer’s Disease',
+		choices = ['Alzheimer’s Disease', 'Paranoid Schizophrenia', 'Post-Traumatic Stress Disorder', 'Cancer'],
+		correctAnswer: 0
 	},
 	{
 		question: 'How much currency does the gang print at the Royal Mint?',
-		choiceA: '879 million euros',
-		choiceB: '926 million euros',
-		choiceC: '984 million euros',
-		choiceD: '777 million euros',
-		correctAnswer: '984 million euros',
+		choices = ['879 million euros', '926 million euros', '984 million euros', '777 million euros'],
+		correctAnswer: 2
 	},
 	{
 		question: 'The Professor’s first name is eventually revealed. What is it?',
-		choiceA: 'Andrés',
-		choiceB: 'Aníbal',
-		choiceC: 'Sergio',
-		choiceD: 'Racquel',
-		correctAnswer: 'Sergio',
+		choices = ['Andrés', 'Aníbal', 'Sergio', 'Racquel'],
+		correctAnswer: 2
 	},
 	{
 		question:
 			'Before giving up on society and turning to a life of crime, what was Moscow’s occupation?',
-		choiceA: 'Hacker',
-		choiceB: 'Soldier',
-		choiceC: 'Miner',
-		choiceD: 'Clerk',
-		correctAnswer: 'Miner',
+		choices = ['Hacker', 'Soldier', 'Miner', 'Clerk'],
+		correctAnswer: 2
 	},
 	{
 		question:
 			'The show is actually called La Casa de Papel, which literally translates to what?',
-		choiceA: 'The Paper House',
-		choiceB: 'The Outcasts',
-		choiceC: 'The House of Outcasts',
-		choiceD: 'The House',
-		correctAnswer: 'The Paper House',
+		choices = ['The Paper House', 'The Outcasts', 'The House of Outcasts', 'The House'],
+		correctAnswer: 0
 	},
 	{
 		question:
 			'In which country does Raquel track the Professor after the first heist?',
-		choiceA: 'Philippines',
-		choiceB: 'Thailand',
-		choiceC: 'China',
-		choiceD: 'Malaysia',
-		correctAnswer: 'Philippines',
+		choices = ['Philippines', 'Thailand', 'China', 'Malaysia'],
+		correctAnswer: 0
 	},
 	{
 		question:
 			'How many heists had Berlin pulled off before the event of “Money Heist”?',
-		choiceA: '25',
-		choiceB: '27',
-		choiceC: '32',
-		choiceD: '23',
-		correctAnswer: '27',
+		choices = ['25', '27', '32', '23'],
+		correctAnswer: 1
 	},
 	{
 		question:
 			'Who quoted this “After all what is more human than the fight for survival ”?',
-		choiceA: 'Professor',
-		choiceB: 'Tokyo',
-		choiceC: 'Rio',
-		choiceD: 'Berlin',
-		correctAnswer: 'Tokyo',
+		choices = ['Professor', 'Tokyo', 'Rio', 'Berlin'],
+		correctAnswer: 2
 	},
 	{
 		question:
 			'Which continent is *not* represented with a nickname among the robbers?',
-		choiceA: 'Africa',
-		choiceB: 'Asia',
-		choiceC: 'Oceania',
-		choiceD: 'Australia',
-		correctAnswer: 'Oceania',
+		choices = ['Africa', 'Asia', 'Oceania', 'Australia'],
+		correctAnswer: 2
 	},
 ];

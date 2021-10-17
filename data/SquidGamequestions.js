@@ -1,82 +1,52 @@
 let squidGameQuestions = [
 	{
 		question:" how many people took part in the games?",
-		choiceA: "486",
-		choiceB: "476",
-		choiceC: "456",
-		choiceD: "499",
-		correctAnswer: "456"
+		choices = ["486", "476", "456", "499"],
+		correctAnswer: 2
 	},
   {
 		question: "What was the correct order the games were played in?",
-		choiceA: "Red Light, Green Light, Honeycomb, Tug of War, Marbles, Stepping Stones, Squid Game",
-		choiceB: "Red Light, Green Light, Tug of War, Marbles, Honeycomb, Stepping Stones, Squid Game",
-		choiceC: "Honeycomb, Red Light, Green Light, Stepping Stones, Marbles, Tug of War, Squid Game",
-		choiceD: "Red Light, Green Light, Tug of War, Honeycomb, Marbles, Stepping Stones, Squid Game", 
-		correctAnswer: "Red Light, Green Light, Honeycomb, Tug of War, Marbles, Stepping Stones, Squid Game",
+		choices = ["Red Light, Green Light, Honeycomb, Tug of War, Marbles, Stepping Stones, Squid Game", "Red Light, Green Light, Tug of War, Marbles, Honeycomb, Stepping Stones, Squid Game", "Honeycomb, Red Light, Green Light, Stepping Stones, Marbles, Tug of War, Squid Game", "Red Light, Green Light, Tug of War, Honeycomb, Marbles, Stepping Stones, Squid Game"], 
+		correctAnswer: 0
 	},
   {
 		question: "What number was Kang Sae-byeok?",
-		choiceA: "047",
-		choiceB: "103",
-		choiceC: "067",
-		choiceD: "301",
-		correctAnswer: "067"
+		choices = ["047", "103", "067", "301"],
+		correctAnswer: 2
 	},
   {
 		question: "The police officer found out his brother had competed in the games, but in what year?",
-		choiceA: "2018",
-		choiceB: "2019",
-		choiceC: "2016",
-		choiceD: "2015",
-		correctAnswer: "2015"
+		choices = ["2018", "2019", "2016", "2015"],
+		correctAnswer: 3
 	},
   {
 		question: "What did Gi-hun accidentally gift his daughter?",
-		choiceA: "A gun", 
-		choiceB: "A lighter",
-		choiceC: "A knife",
-		choiceD: "Matchsticks",
-		correctAnswer: "A lighter"
+		choices = ["A gun", "A lighter", "A knife", "Matchsticks"],
+		correctAnswer: 1
 	},
   {
 		question: "What shape did the old man get to cut out in the honeycomb challenge?", 
-		choiceA: "Triangle",
-		choiceB: "Circle",
-		choiceC: "Star", 
-		choiceD: "Umbrella",
-		correctAnswer:  "Star"
+		choices = ["Triangle", "Circle", "Star", "Umbrella"],
+		correctAnswer: 2
 	},
 		{
 		question: "What happened to Deok-su when he went home during the Hell episode?", 
-		choiceA: "He robbed from his boss", 
-		choiceB: "He was stabbed", 
-		choiceC: "He jumped from a bridge", 
-		choiceD: "He got hit by a car",
-		correctAnswer:  "He jumped from a bridge"
+		choices = ["He robbed from his boss", "He was stabbed", "He jumped from a bridge", "He got hit by a car"],
+		correctAnswer: 2
 	},
 		{
 		question: "Which staff members have the most authority?",
-		choiceA: "Circle",
-		choiceB: "Square",
-		choiceC: "Triangle", 
-		choiceD: "Star",
-		correctAnswer: "Square"
+		choices = ["Circle", "Square", "Triangle", "Star"],
+		correctAnswer: 1
 	},
 		{
 		question: "Which of the following is FALSE:",
-		choiceA: "If the majority of players agree, the games can be stopped",
-		choiceB: "Players are allowed to sit out of a game, with the Front Man's permission",
-		choiceC: "All of the games are hidden in paintings around the dorm room",
-		choiceD: "Players are allowed to go home after each game ", 
-		correctAnswer: "Players are allowed to sit out of a game, with the Front Man's permission",
+		choices = ["If the majority of players agree, the games can be stopped", "Players are allowed to sit out of a game, with the Front Man's permission", "All of the games are hidden in paintings around the dorm room", "Players are allowed to go home after each game "], 
+		correctAnswer: 2
 	},
 		{
 		question: "which of these was a meal given to the players?", 
-		choiceA: "One avocado",
-		choiceB: "One slice of bread", 
-		choiceC: "One apple", 
-		choiceD: "One boiled egg",
-		correctAnswer: "One boiled egg"
+		choices = ["One avocado", "One slice of bread", "One apple", "One boiled egg"],
+		correctAnswer: 3
 	},
 ]

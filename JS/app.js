@@ -33,3 +33,7 @@ function startGame() {
 	h1.style.display = 'none';
 	categorizeContainer.classList.remove('hide');
 }
+
+function appendQuestion(params) {
+  
+}

@@ -2,83 +2,53 @@ let bridgertonQuestions = [
 	{
 		question:
 			'Complete the quote: "Why settle for a ______, when you can have a prince?"',
-		choiceA: 'Lord',
-		choiceB: 'Man',
-		choiceC: 'Duke',
-		choiceD: 'Nigel Berbrooke',
-		correctAnswer: 'Duke',
+		choices = ['Lord', 'Man', 'Duke', 'Nigel Berbrooke'],
+		correctAnswer: 2
 	},
 	{
 		question: 'Who is the eldest Bridgerton brother?',
-		choiceA: 'Anthony',
-		choiceB: 'Colin',
-		choiceC: 'Benedict',
-		choiceD: 'Will',
-		correctAnswer: 'Anthony',
+		choices = ['Anthony', 'Colin', 'Benedict', 'Will'],
+		correctAnswer: 0
 	},
 	{
 		question: 'What was the name of this guy, who was obsessed with cheese?',
-		choiceA: 'Lord Nolan',
-		choiceB: 'Mr Wetherby',
-		choiceC: 'Mr Finch',
-		choiceD: 'Lord Birch',
-		correctAnswer: 'Mr Finch',
+		choices = ['Lord Nolan', 'Mr Wetherby', 'Mr Finch', 'Lord Birch'],
+		correctAnswer: 2
 	},
 	{
 		question: 'How many Bridgerton siblings are there in total?',
-		choiceA: '4',
-		choiceB: '8',
-		choiceC: '7',
-		choiceD: '6',
-		correctAnswer: '8',
+		choices = ['4', '8', '7','6'],
+		correctAnswer: 1
 	},
 	{
 		question: 'What is the name of the Featherington housekeeper?',
-		choiceA: 'Mrs Colson',
-		choiceB: 'Mrs Varley',
-		choiceC: 'Mrs Cliffe',
-		choiceD: 'Mrs Goode',
-		correctAnswer: 'Mrs Varley',
+		choices = ['Mrs Colson', 'Mrs Varley', 'Mrs Cliffe', 'Mrs Goode'],
+		correctAnswer: 1
 	},
 	{
 		question: "How did the Duke's mother die",
-		choiceA: 'She fell off a horse',
-		choiceB: 'In childbirth',
-		choiceC: 'She caught an awful plague',
-		choiceD: 'In a duel',
-		correctAnswer: 'In childbirth',
+		choices = ['She fell off a horse','In childbirth', 'She caught an awful plague', 'In a duel'],
+		correctAnswer: 1
 	},
 	{
 		question:
 			"You should definitely know this, what is the Duke's boxing pal called?",
-		choiceA: 'James',
-		choiceB: 'Ben',
-		choiceC: 'Thomas',
-		choiceD: 'Will',
-		correctAnswer: 'Will',
+		choices = ['James', 'Ben', 'Thomas', 'Will'],
+		correctAnswer: 3
 	},
 	{
 		question: 'How did Anthony and the Duke first meet?',
-		choiceA: 'They attended Oxford together',
-		choiceB: 'At a ball hosted by Lady Danbury',
-		choiceC: 'They were introduced by a mutual friend',
-		choiceD: 'They attended a duelling class together',
-		correctAnswer: 'They attended Oxford together',
+		choices = ['They attended Oxford together', 'At a ball hosted by Lady Danbury', 'They were introduced by a mutual friend', 'They attended a duelling class together'],
+		correctAnswer: 0
 	},
 	{
 		question: 'What century is Bridgerton set in?',
-		choiceA: '17th',
-		choiceB: '18th',
-		choiceC: '19th',
-		choiceD: '20th',
-		correctAnswer: '19th',
+		choices = ['17th', '18th', '19th', '20th'],
+		correctAnswer: 2
 	},
 	{
 		question: 'How are the Bridgerton siblings named?',
-		choiceA: 'Based on their starsigns',
-		choiceB: 'With the same letter as the month they are born',
-		choiceC: 'Alphabetically',
-		choiceD: 'After the doctor who was there during the birth',
-		correctAnswer: 'Alphabetically',
+		choices = ['Based on their starsigns', 'With the same letter as the month they are born', 'Alphabetically', 'After the doctor who was there during the birth'],
+		correctAnswer: 2
 	},
 ];

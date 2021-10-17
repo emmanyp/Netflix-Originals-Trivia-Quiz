@@ -1,11 +1,16 @@
 /*---------------------------- Constants -----------------------------*/
 
+import {getRandomLcdpQuestions} from '../data/LaCasadePapelQuestions.js';
 
+import {getRandomBridgertonQuestions} from "../data/Bridgertonquestions.js"
 
+import {getRandomSquidGameQuestions} from "../data/SquidGamequestions.js"
+
+import {getRandomTheQueensGambitQuestions} from "../data/theQueen'sGambitQuestions.js"
 
 /*------------------------- Variables (state) ------------------------*/
 
-
+const questions = []
 
 
 /*--------------------- Cached Element References ---------------------*/
@@ -24,6 +29,18 @@ const categorizeContainer = document.querySelector('#categorize-container');
 
 playBtn.addEventListener('click', startGame);
 
+sGameBtn.addEventListener('click', () => {
+  console.log(getRandomSquidGameQuestions());
+})
+bridgertonBtn.addEventListener('click', () => {
+  console.log(getRandomBridgertonQuestions());
+})
+tqgBtn.addEventListener('click', () => {
+  console.log(getRandomTheQueensGambitQuestions());
+})
+lcdpBtn.addEventListener('click', () => {
+  console.log(getRandomLcdpQuestions());
+})
 
 
 /*----------------------------- Functions -----------------------------*/
@@ -34,6 +51,3 @@ function startGame() {
 	categorizeContainer.classList.remove('hide');
 }
 
-function appendQuestion(params) {
-  
-}

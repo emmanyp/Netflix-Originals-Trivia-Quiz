@@ -12,14 +12,15 @@ import {theQueensGambitQuestions} from "../data/theQueen'sGambitQuestions.js"
 
 let questions; 
 let score; 
-
+let correct;
 /*--------------------- Cached Element References ---------------------*/
 
 const h1 = document.querySelector('#heading');
 const playBtn = document.querySelector('#play-btn');
 const categorizeContainer = document.querySelector('#categorize-container');
 const categories = document.querySelectorAll('.cat')
-console.log(categories);
+// console.log(categories);
+const questionContainer = document.querySelector('#question-container');
 
 /*------------------------- Event Listeners ---------------------------*/
 
@@ -52,4 +53,15 @@ function setCategorize(evt) {
 	}
 	// console.log(questions);
 	selectRandomQuestion();
+}
+
+function selectRandomQuestion() {
+  let idx = Math.floor(Math.random() * questions.length)
+  if (questions[idx].asked === false) {
+    renderQuestion(idx)
+    questions[idx].asked = true
+    correct = questions[idx].correctAnswer
+	}else {
+    selectRandomQuestion()
+  }
 }

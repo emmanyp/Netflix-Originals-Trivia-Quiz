@@ -73,3 +73,14 @@ function renderQuestion(idx) {
 	renderChoices(questions[idx]);
 }
 
+function renderChoices(question) {
+	question.choices.forEach((choice, index) => {
+		let button = document.createElement('button');
+		button.innerText = choice;
+		button.id = index;
+		button.addEventListener('click', selectAnswer);
+		console.log(button);
+		questionContainer.appendChild(button);
+	});
+}
+

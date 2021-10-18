@@ -65,3 +65,11 @@ function selectRandomQuestion() {
     selectRandomQuestion()
   }
 }
+
+function renderQuestion(idx) {
+	const question = document.createElement('h1');
+	question.innerText = questions[idx].question;
+	questionContainer.appendChild(question);
+	renderChoices(questions[idx]);
+}
+

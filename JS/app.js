@@ -84,3 +84,13 @@ function renderChoices(question) {
 	});
 }
 
+function selectAnswer(evt) {
+	console.log(evt.target.id);
+	if (parseInt(evt.target.id) === correct) {
+		console.log('right');
+		correct.style.backgroundColor = 'green';
+	} else {
+		console.log('wrong');
+		// button.style.backgroundColor = 'red'
+	}
+}

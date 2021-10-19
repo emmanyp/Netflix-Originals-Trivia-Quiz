@@ -9,7 +9,6 @@ import { squidGameQuestions } from '../data/SquidGamequestions.js';
 import {theQueensGambitQuestions} from "../data/theQueen'sGambitQuestions.js"
 
 /*------------------------- Variables (state) ------------------------*/
-
 let questions; 
 let score;
 let correct;
@@ -37,9 +36,9 @@ categories.forEach(function (btn) {
 function startGame() {
   score = 0
   playBtn.style.display = 'none';
-  nextBtn.style.display = 'none'
 	h1.style.display = 'none';
 	categorizeContainer.classList.remove('hide');
+  nextBtn.style.display = 'none';
 }
 
 function setCategorize(evt) {
@@ -126,8 +125,3 @@ function selectAnswer(evt) {
 	}
   
 }
-
-
-
-
-

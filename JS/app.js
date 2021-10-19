@@ -17,6 +17,7 @@ let correct;
 
 const h1 = document.querySelector('#heading');
 const playBtn = document.querySelector('#play-btn');
+const restartBtn = document.querySelector('#restart-btn');
 const nextBtn = document.querySelector('#next-btn');
 const categorizeContainer = document.querySelector('#categorize-container');
 const categories = document.querySelectorAll('.cat')
@@ -26,6 +27,7 @@ const scoreContainer = document.querySelector('.score-container');
 /*------------------------- Event Listeners ---------------------------*/
 playBtn.addEventListener('click', startGame);
 nextBtn.addEventListener('click', selectRandomQuestion);
+restartBtn.addEventListener('click', restartGame);
 categories.forEach(function (btn) {
   btn.addEventListener('click', setCategorize)
 });
@@ -33,6 +35,7 @@ categories.forEach(function (btn) {
 
 /*----------------------------- Functions -----------------------------*/
 
+restartBtn.style.display = 'none';
 function startGame() {
   score = 0
   playBtn.style.display = 'none';
@@ -61,14 +64,31 @@ function setCategorize(evt) {
 
 function selectRandomQuestion() {
   let idx = Math.floor(Math.random() * questions.length)
-  if (questions[idx].asked === false) {
-    renderQuestion(idx)
-    questions[idx].asked = true
-    questions.push()
-    correct = questions[idx].correctAnswer
-	}else {
-    selectRandomQuestion()
+  let allAnswered = checkAllAnswered()
+  if (allAnswered) {
+    showScore()
+  }else {
+
+    if (questions[idx].asked === false) {
+      renderQuestion(idx)
+      questions[idx].asked = true
+      questions.push()
+      correct = questions[idx].correctAnswer
+    }
+    else {
+      selectRandomQuestion()
+    }
   }
+}
+
+function checkAllAnswered() {
+  let allAnswered = true
+  questions.forEach(question => {
+    if (!question.asked) {
+      allAnswered = false
+    }
+  })
+  return allAnswered
 }
 
 function renderQuestion(idx) {
@@ -77,7 +97,8 @@ function renderQuestion(idx) {
 	const question = document.createElement('h2');
 	question.innerText = questions[idx].question;
 	questionContainer.appendChild(question);
-  scoreContainer.innerText = 'SCORE: '+score
+  // scoreContainer.innerText = 'SCORE: '+score
+
 	renderChoices(questions[idx]);
 }
 
@@ -111,17 +132,34 @@ function renderChoices(question) {
 }
 
 function selectAnswer(evt) {
-	console.log(evt.target.id);
 	if (parseInt(evt.target.id) === correct) {
     alert('Your answer is correct');
-    score += 10;
-    scoreContainer.innerText = 'SCORE: ' + score;
-		console.log('right');
-		// correct.style.backgroundColor = 'green';
+    score += 10; 
+    let div = document.createElement('div')
+    div.innerText = 'SCORE: ' + score;
+    scoreContainer.appendChild(div)
 	} else {
     alert('Your answer is wrong');
-		console.log('wrong');
-		// button.style.backgroundColor = 'red'
 	}
-  
+}
+
+
+
+function showScore() {
+  questionContainer.innerHTML = '';
+	scoreContainer.classList.remove('hide');
+  restartBtn.style.display = 'block';
+  playBtn.style.display = 'none'
+  nextBtn.style.display = 'none'
+  let h2 = document.createElement('h2')
+  h2.innerText = `Your total score : ${score}`;
+  scoreContainer.appendChild(h2)
+  let h3 = document.createElement('h3')
+  h3.innerText = `You answered : ${score / 10} out of ${questions.length} questions`;
+  scoreContainer.appendChild(h3)
+	
+}
+
+function restartGame() {
+  location.reload()
 }

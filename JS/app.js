@@ -12,6 +12,7 @@ import {theQueensGambitQuestions} from "../data/theQueen'sGambitQuestions.js"
 let questions; 
 let score;
 let correct;
+let timeLeft;
 
 /*--------------------- Cached Element References ---------------------*/
 
@@ -23,6 +24,7 @@ const categorizeContainer = document.querySelector('#categorize-container');
 const categories = document.querySelectorAll('.cat')
 const questionContainer = document.querySelector('#question-container');
 const scoreContainer = document.querySelector('.score-container');
+const timerContainer = document.querySelector('#timer');
 
 /*------------------------- Event Listeners ---------------------------*/
 playBtn.addEventListener('click', startGame);
@@ -67,18 +69,14 @@ function selectRandomQuestion() {
   let allAnswered = checkAllAnswered()
   if (allAnswered) {
     showScore()
-  }else {
-
-    if (questions[idx].asked === false) {
-      renderQuestion(idx)
-      questions[idx].asked = true
-      questions.push()
-      correct = questions[idx].correctAnswer
-    }
-    else {
-      selectRandomQuestion()
-    }
-  }
+  }else if (questions[idx].asked === false) {
+			renderQuestion(idx);
+			questions[idx].asked = true;
+			questions.push();
+			correct = questions[idx].correctAnswer;
+			startTimer();
+		
+	}
 }
 
 function checkAllAnswered() {
@@ -98,7 +96,7 @@ function renderQuestion(idx) {
 	question.innerText = questions[idx].question;
 	questionContainer.appendChild(question);
   // scoreContainer.innerText = 'SCORE: '+score
-
+console.log('question');
 	renderChoices(questions[idx]);
 }
 
@@ -126,7 +124,7 @@ function renderChoices(question) {
 		button.id = index;
     button.classList.add('optionalChoice')
 		button.addEventListener('click', selectAnswer);
-		console.log(button);
+		// console.log(button);
 		questionContainer.appendChild(button);
 	});
 }
@@ -162,4 +160,18 @@ function showScore() {
 
 function restartGame() {
   location.reload()
+}
+
+function startTimer() {
+    timeLeft = 15;
+      setInterval(function () {
+        timerContainer.textContent = timeLeft + ' seconds remaining.';
+        timeLeft -= 1;
+        if (timeLeft < 0) {
+          timerContainer.textContent = 'Go to the next question';
+        }
+        
+      }, 1000);
+      
+    
 }

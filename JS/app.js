@@ -7,12 +7,23 @@ import {bridgertonQuestions} from '../data/Bridgertonquestions.js';
 import { squidGameQuestions } from '../data/SquidGamequestions.js';
 
 import {theQueensGambitQuestions} from "../data/theQueen'sGambitQuestions.js"
-
 /*------------------------- Variables (state) ------------------------*/
 let questions; 
 let score;
 let correct;
 let timeLeft;
+let SQgameUrl =
+	'https://www.hellokpop.com/wp-content/uploads/2021/08/Squid-Game-Main-Poster.jpg';
+
+let tqgUrl =
+	'https://assets.fontsinuse.com/static/use-media-items/135/134464/full-2160x1080/604cc48d/QueensGambit_02.png';
+
+let lcdpUrl =
+	'https://static.wikia.nocookie.net/money-heist/images/1/18/Money_Heist_Part_2_poster.jpg';
+
+let bridgUrl =
+	'https://static.wikia.nocookie.net/bridgerton/images/2/27/Bridgerton_%28TV%29.jpg';
+
 
 /*--------------------- Cached Element References ---------------------*/
 
@@ -25,6 +36,8 @@ const categories = document.querySelectorAll('.cat')
 const questionContainer = document.querySelector('#question-container');
 const scoreContainer = document.querySelector('.score-container');
 const timerContainer = document.querySelector('#timer');
+const img = document.createElement('img');
+const src = document.getElementById('images');
 
 /*------------------------- Event Listeners ---------------------------*/
 playBtn.addEventListener('click', startGame);
@@ -50,17 +63,24 @@ function setCategorize(evt) {
   nextBtn.style.display = 'block';
 	if (evt.target.id === 'sgame-button') {
 		questions = squidGameQuestions;
+    img.src = SQgameurl
+    src.appendChild(img);
 	}
 	if (evt.target.id === 'bridg-button') {
 		questions = bridgertonQuestions;
+    img.src = bridgUrl;
+		src.appendChild(img);
 	}
 	if (evt.target.id === 'lcdp-button') {
 		questions = laCasaDePapleQuestions;
+    img.src = lcdpUrl;
+		src.appendChild(img);
 	}
 	if (evt.target.id === 'tqg-button') {
 		questions = theQueensGambitQuestions;
+    img.src = tqgUrl;
+		src.appendChild(img);
 	}
-	console.log(questions);
 	selectRandomQuestion();
 }
 

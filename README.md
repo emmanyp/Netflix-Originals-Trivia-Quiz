@@ -3,6 +3,8 @@
 
 Project Description: Netflix Original Trivia Quiz is a quiz game with 4 of the most-watched Netflix shows: Squid Game, Bridgerton, The Queen's Gambit, and La Casa de Papel. once you choose your category, you will get a question with 4 options, and you can choose the right answer.
 
+https://fervent-euclid-0cdb3f.netlify.app/
+
 
 ### Getting Started: 
 

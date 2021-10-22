@@ -19,13 +19,11 @@ html {
   padding: 0;
   margin: 0;
   display: flex;
-  width: 100vw; 
+  width: 100vw;
   height: 100vh;
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  margin: 0;
-  display: flex;
   flex-direction: column;
   background-size: cover; 
   background: url('https://1000logos.net/wp-content/uploads/2017/05/Netflix-Logo-2006-768x512.png') no-repeat center fixed;
@@ -36,17 +34,22 @@ html {
 
 
 h1 {
-	position: fixed;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	line-height: 1.6;
-	top: 0;
-  padding-top: 50px;
-	left: 25%;
+  position: fixed;
   color: red;
   font-size: 20px;
-	overflow: hidden;
+  font-weight: 100;
+	font-size: 30px;
+	top: 10%;
+	left: 55%;
+	transform: translate(-65%, -65%);
+	cursor: pointer;
+	padding: 10px 20px;
+	align-items: center; 
+	display: flex;
+  text-align: center;
+	justify-content: center;
+  color: red;
+    
 }
 
 h2{
@@ -64,7 +67,11 @@ h2{
 img {
     width: 250px;
     height: 250px;
-    margin-left:  50px;
+    box-shadow: 0 0 10px 2px;
+    display: flex;
+    top: 10%;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -81,7 +88,6 @@ img {
   border-radius: 5px;
   padding: 20px;
   margin-left: 20px;
-  /* box-shadow: 0 0 10px 2px */
 } 
 
 .cat{
@@ -110,17 +116,25 @@ img {
   border-radius: 10%;
   margin: 10px;
   color: white;
+  box-shadow: 0 0 10px 2px
 } 
 
 .score-container{
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   color: white;
   font-size: 2rem;
   background-color:black; 
-  /* box-shadow: 0 0 10px 2px */
+  /* position: absolute; */
+	top: 0;
+	left: 50%;
+	height: 100%;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+  text-align: center;
+	flex-direction: column;
+	padding: 50px 10px;
   
 }
 
@@ -149,7 +163,7 @@ img {
 	line-height: 1.6;
   color: white;
 	top: 85%;
-	left: 35%;
+	left: 45%;
   background-color: red; 
   border-radius: 15%;
 } 
@@ -171,7 +185,7 @@ img {
 } 
 
 #restart-btn{
-  position: relative;
+  position: fixed;
 	height: 50px;
 	width: 100px;
 	font-size: 1em;
@@ -180,14 +194,14 @@ img {
 	align-items: center;
   color: white;
 	line-height: 1.6;
-	top: 85%;
-	left: 30%;
+	top: 35%;
+	left: 44%;
   background-color: red;
   border-radius: 15%;
-  margin: 20px;
+  margin-right: 70px;
 }
 #timer{
-  color:white;
+  color:white; 
 }
 
 
@@ -197,15 +211,13 @@ img {
 
 
 
-@media only screen and (min-width: 1400x) {
-  body{
-    width: 1370px;
-  }
-  main {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
 
-  
+
+@media screen and (max-width: 600px) {
+  main {
+    flex-direction: column;
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
 }

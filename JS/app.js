@@ -53,8 +53,8 @@ nextBtn.addEventListener('click', selectRandomQuestion);
 
 restartBtn.style.display = 'none';
 function startGame() {
-  score = 0
   body.style.background = 'black'
+  score = 0
   playBtn.style.display = 'none';
 	h1.style.display = 'none';
 	categorizeContainer.classList.remove('hide');
@@ -93,13 +93,13 @@ function selectRandomQuestion() {
   let allAnswered = checkAllAnswered()
   if (allAnswered) {
     showScore()
-    timerContainer.textContent = '';
+    // timerContainer.textContent = '';
   }else if(questions[idx].asked === false) {
 		renderQuestion(idx);
 		questions[idx].asked = true;
 		questions.push();
 		correct = questions[idx].correctAnswer;
-		startTimer();
+    startTimer();
 	}
 }
 
@@ -151,10 +151,10 @@ function renderChoices(question) {
       score += 10; 
       let div = document.createElement('div')
       scoreContainer.appendChild(div)
-      // button.classList.add('correct')
-    } else {
-      // button.classList.add('incorrect')
       button.style.background = 'green'
+      
+    } else {
+      button.style.background = 'black'
     }
   });
 		questionContainer.appendChild(button);
@@ -166,7 +166,7 @@ function renderChoices(question) {
 
 function showScore() {
   questionContainer.innerHTML =""
-	timerContainer.textContent = ""
+	// timerContainer.textContent = ""
 	scoreContainer.classList.remove('hide');
   restartBtn.style.display = 'block';
   playBtn.style.display = 'none'
@@ -184,30 +184,13 @@ function restartGame() {
 }
 
 function startTimer() {
-    timeLeft = 15;
-      setInterval(function () {
-        timerContainer.textContent = timeLeft + ' seconds remaining.';
-        timeLeft -= 1;
-        if (timeLeft < 0) {
-          timerContainer.textContent = 'Go to the next question';
-        }
-        
-      }, 1000);
-      
-    
+  timerContainer.classList.remove('hide')
+	timeLeft = 15;
+	setInterval(function () {
+		timerContainer.textContent = timeLeft + ' seconds remaining.';
+		timeLeft -= 1;
+		if (timeLeft < 0) {
+			timerContainer.textContent = 'Go to the next question';
+		}
+	}, 1000);
 }
-
-// function toggleLightDark() {
-// 	body.className = body.className === 'dark' ? '' : 'dark';
-// }
-
-// function checkDarkPref() {
-// 	if (
-// 		window.matchMedia('(prefers-color-scheme:dark)').matches &&
-// 		body.className !== 'dark'
-// 	) {
-// 		toggleLightDark();
-// 	}
-// }
-
-// checkDarkPref();

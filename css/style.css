@@ -1,3 +1,211 @@
+html {
+  box-sizing: border-box;
+  
+}
+
+*, 
+*::before, 
+*::after { 
+  box-sizing: inherit;
+}
+
+
+:root {
+  font-size: 62.5%;
+}
+
+  
+  body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 100vw; 
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-size: cover; 
+  background: url('https://1000logos.net/wp-content/uploads/2017/05/Netflix-Logo-2006-768x512.png') no-repeat center fixed;
+  --body-bg: #000000;
+  background-color: var(--body-bg); 
+} 
+
+
+
+h1 {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1.6;
+	top: 0;
+  padding-top: 50px;
+	left: 25%;
+  color: red;
+  font-size: 20px;
+	overflow: hidden;
+}
+
+h2{
+  background-color: black;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 10px;
+  padding: 1.2rem;
+  font-family: var(--serif);
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    margin-left:  50px;
+    
+}
+
+.categorize-container{
+  display: flex;
+  flex-direction: column;
+  justify-content:space-evenly;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  background-color:black; 
+  width: 800px;
+  max-width: 80%;
+  border-radius: 5px;
+  padding: 20px;
+  margin-left: 20px;
+  /* box-shadow: 0 0 10px 2px */
+} 
+
+.cat{
+  height: 80px;
+	width: 70%;
+  margin-top: 10px;
+	font-size: 18px;
+  color: white;
+	display: flex;
+  flex-direction: column;
+	align-items: center;
+	line-height: 1.6;
+  margin-left:40px;
+  background-color: red; 
+    padding: 2rem;
+    border-radius: 10%; 
+}
+.optionalChoice{
+  height: 80px;
+	width: 70%;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+  justify-content: center;
+  background: linear-gradient( #b43a3a, #fd1d1d,#ac0000);
+  border-radius: 10%;
+  margin: 10px;
+  color: white;
+} 
+
+.score-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  background-color:black; 
+  /* box-shadow: 0 0 10px 2px */
+  
+}
+
+
+
+
+.question-container{
+  background-color: black;
+	display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: #000000;
+  /* box-shadow: 0 0 10px 2px */
+	
+}
+
+#play-btn{
+	position: fixed;
+	height: 50px;
+	width: 100px;
+	font-size: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 1.6;
+  color: white;
+	top: 85%;
+	left: 35%;
+  background-color: red; 
+  border-radius: 15%;
+} 
+
+#next-btn{
+  height: 50px;
+	width: 100px;
+	font-size: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  color: white;
+	line-height: 1.6;
+	top: 85%;
+	left: 35%;
+  background-color: red;
+  border-radius: 15%;
+  margin-top: 5px;
+} 
+
+#restart-btn{
+  position: relative;
+	height: 50px;
+	width: 100px;
+	font-size: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  color: white;
+	line-height: 1.6;
+	top: 85%;
+	left: 30%;
+  background-color: red;
+  border-radius: 15%;
+  margin: 20px;
+}
+#timer{
+  color:white;
+}
+
+
 .hide {
   display: none;
+}
+
+
+
+@media only screen and (min-width: 1400x) {
+  body{
+    width: 1370px;
+  }
+  main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  
 }

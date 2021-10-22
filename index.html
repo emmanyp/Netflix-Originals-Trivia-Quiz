@@ -15,24 +15,23 @@
 <body>
   <main class="container">
     <h1 id="heading">Netflix Original Trivia</h1>
-    <section id="categorize-container" class="hide">
-        <button id="sgame-button" class="btn s-game btn-lg cat">Squid Game</button>
-        <button id="bridg-button" class="btn bridgerton btn-lg cat">Bridgerton</button>
-        <button id="lcdp-button" class="btn lcdp btn-lg cat">La Casa de Papel</button>
-        <button id="tqg-button" class="btn tqg btn-lg cat">The Queen's Gambit</button>
-    </section>
-    <div id="question-container">
-
-    </div>
-
-    <div class="score-container hide"></div>
-    <div id="images"></div>
-    <div id="timer"></div>
+    <section id="categorize-container" class="categorize-container hide">
+        <button id="sgame-button" class="btn s-game cat">Squid Game</button>
+        <button id="bridg-button" class="btn bridgerton cat">Bridgerton</button>
+        <button id="lcdp-button" class="btn lcdp cat">La Casa de Papel</button>
+        <button id="tqg-button" class="btn tqg cat">The Queen's Gambit</button>
+      </section>
+      <audio src="./audio.wav"></audio>
+      <div id="images"></div>
+      <div id="question-container" class="question-container">
+      </div>
       <div class="controls">
         <button id="play-btn" class="btn play btn-lg">Play</button>
+        <button id="next-btn" class="btn next" hidden>Next</button>
         <button id="restart-btn" class="btn restart btn-lg">Restart</button>
-        <button id="next-btn" class="btn next hide">Next</button>
       </div>
+      <div id="timer" class="hide"></div>
+    <div class="score-container hide"></div>
   </main>
 </body>
 </html>

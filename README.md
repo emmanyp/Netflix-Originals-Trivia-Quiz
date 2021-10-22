@@ -42,3 +42,5 @@ https://fervent-euclid-0cdb3f.netlify.app/
 
 	Adding more categories 
 	Tracking player scores across categories 
+	Adding light/ dark mood
+
